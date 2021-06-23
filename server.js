@@ -28,8 +28,8 @@ connection.on("error", (err) => {
   console.log("Error: can't connect to Mongoose");
 });
 
-app.use("./routes/htmlroutes.js");
-app.use("./routes/apiroutes.js");
+app.use(require("./routes/htmlroutes.js"));
+app.use(require("./routes/apiroutes.js"));
 
 app.listen(PORT, () => {
   console.log(`Listening on Port ${PORT}`);
